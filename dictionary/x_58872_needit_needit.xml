@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="ast_license_base" label="needit" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="new field 2" max_length="200" name="new_field_2" type="integer"/>
+        <element label="active" max_length="40" name="u_active" type="integer"/>
+        <element choice="3" default="active" label="Active" max_length="40" name="u_active_1" type="integer">
+            <choice/>
+        </element>
+        <element label="Due Date" mandatory="true" max_length="40" name="u_due_date_2" type="due_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Priority" max_length="40" name="u_priority_1" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="13" label="State" max_length="40" name="u_state_2" type="string">
+            <choice>
+                <element label="Requested" sequence="0" value="13"/>
+                <element label="Awaiting approval" sequence="1" value="14"/>
+                <element label="Approved" sequence="2" value="15"/>
+                <element label="Awaiting Feedback" sequence="3" value="16"/>
+                <element label="Closed Complete" sequence="4" value="17"/>
+                <element label="Withdrawn" sequence="5" value="18"/>
+            </choice>
+        </element>
+    </element>
+</database>
